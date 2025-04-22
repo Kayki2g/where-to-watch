@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #081828;
+  color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  display: block;
+}
+
+.logo h1 {
+  color: #f8f8f8;
+  font-size: 24px;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #08c8f8;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #08c8f8;
+  border: none;
+  border-radius: 5px;
+  color: #081828;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #08f8e8;
+}
+
+#results {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+}
+
+.card {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  background-color: #3f51b5;
+}
+
+.card button:hover {
+  background-color: #303f9f;
+}
+
+headers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #08c8f8;
+  font-weight: bold;
+}
+
+/* Responsivo para Tablets */
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #08c8f8;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #results {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* Responsivo para Celulares */
+@media (max-width: 480px) {
+  .logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #08c8f8;
+  }
+
+  button {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  #results {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
